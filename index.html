@@ -435,6 +435,11 @@
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
   }
+  .project-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    position: relative; z-index: 1;
+  }
   .project-thumb::before {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(6,182,212,0.08));
@@ -882,15 +887,36 @@
     <h2 class="section-title reveal">What I've built.</h2>
     <p class="section-sub reveal">Real projects. Real problems solved. Real code shipped.</p>
     <div class="projects-grid">
+      <div class="project-card p2">
+        <div class="project-thumb">
+          <div class="project-thumb-glow"></div>
+          <img src="legendband.png" alt="Legend Band project preview" />
+        </div>
+        <div class="project-body">
+          <div class="project-tag">Music Band Website</div>
+          <h3 class="project-title">Legend Band</h3>
+          <p class="project-desc">A modern music band website built to showcase the band, share upcoming performances, and make it easier for fans and event organizers to discover gigs. It helps improve band gigs by increasing visibility, engagement, and booking opportunities.</p>
+          <div class="project-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Vite</span>
+            <span class="stack-tag">Tailwind CSS</span>
+            <span class="stack-tag">Responsive Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://gentil015.github.io/legend/" target="_blank" class="btn-sm btn-sm-p">Live Demo</a>
+            <a href="https://github.com/gentil015/legend" target="_blank" class="btn-sm btn-sm-g">GitHub</a>
+          </div>
+        </div>
+      </div>
       <div class="project-card p4">
         <div class="project-thumb">
           <div class="project-thumb-glow"></div>
-          <div class="project-thumb-icon">⛪</div>
+          <img src="aebrcyivugiza.png" alt="AEBR Cyivugiza project preview" />
         </div>
         <div class="project-body">
           <div class="project-tag">Community Website</div>
           <h3 class="project-title">AEBR Cyivugiza</h3>
-          <p class="project-desc">A dedicated website created for AEBR Cyivugiza church, designed to share events, sermons, and community news with a clean and accessible experience.</p>
+          <p class="project-desc">A dedicated website for the church, designed to share events, sermons, and community news with a clean and accessible experience.</p>
           <div class="project-stack">
             <span class="stack-tag">HTML/CSS</span>
             <span class="stack-tag">JavaScript</span>
@@ -962,27 +988,6 @@
           </div>
           <div class="project-links">
             <a href="#" class="btn-sm btn-sm-p">Live Demo</a>
-            <a href="#" class="btn-sm btn-sm-g">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card p4">
-        <div class="project-thumb">
-          <div class="project-thumb-glow"></div>
-          <div class="project-thumb-icon">⛪</div>
-        </div>
-        <div class="project-body">
-          <div class="project-tag">Community Website</div>
-          <h3 class="project-title">AEBR Cyivugiza</h3>
-          <p class="project-desc">A dedicated website created for AEBR Cyivugiza church, designed to share events, sermons, and community news with a clean and accessible experience.</p>
-          <div class="project-stack">
-            <span class="stack-tag">HTML/CSS</span>
-            <span class="stack-tag">JavaScript</span>
-            <span class="stack-tag">Responsive Design</span>
-            <span class="stack-tag">Netlify</span>
-          </div>
-          <div class="project-links">
-            <a href="https://cyivugiza.netlify.app/" target="_blank" class="btn-sm btn-sm-p">Live Demo</a>
             <a href="#" class="btn-sm btn-sm-g">GitHub</a>
           </div>
         </div>
