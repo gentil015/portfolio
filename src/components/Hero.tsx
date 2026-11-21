@@ -60,9 +60,9 @@ export function Hero() {
               <span className="avatar-scan" aria-hidden="true" />
             </div>
           </div>
-          <span className="stage-chip chip-ai">⚡ AI / ML</span>
-          <span className="stage-chip chip-bot">🤖 Robotics</span>
-          <span className="stage-chip chip-auto">⚙️ Automation</span>
+          <span className="stage-chip chip-1">⚡ Next.js</span>
+          <span className="stage-chip chip-2">🛠️ NestJS</span>
+          <span className="stage-chip chip-3">🗄️ PostgreSQL</span>
           <span className="stage-badge">Founder · {site.company}</span>
         </div>
       </div>

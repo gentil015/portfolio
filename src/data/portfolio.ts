@@ -21,14 +21,6 @@ export type Project = {
   repoUrl?: string
 }
 
-export type TimelineItem = {
-  period: string
-  title: string
-  description: string
-  icon: string
-  side: 'left' | 'right'
-}
-
 export type Service = {
   icon: string
   title: string
@@ -49,7 +41,7 @@ export const site = {
   firstName: 'Gentil',
   lastName: 'Dushime',
   eyebrow: 'Software Developer & Founder',
-  role: 'Future Software Engineer',
+  role: 'Software Engineer',
   company: 'BII Technologies',
   email: 'dushimegentil0@gmail.com',
   github: 'https://github.com/gentil015',
@@ -57,10 +49,10 @@ export const site = {
   whatsapp: 'https://wa.me/250795946213',
   portrait: asset('profile.jpg'),
   typedPhrases: [
-    'Building the Future with Software.',
-    'Turning Ideas into Intelligent Systems.',
+    'Building Software That Matters.',
+    'Turning Ideas into Real Applications.',
     'Creating Technology that Matters.',
-    'Engineering Solutions for Tomorrow.',
+    'Engineering Solutions That Last.',
   ],
 }
 
@@ -84,16 +76,14 @@ export const aboutParagraphs = [
       ", I'm laying the foundation for a company that will bridge innovation and impact across Africa and beyond. I believe technology is the most powerful tool for creating real change.",
   },
   {
-    before: 'My current path is focused on ',
-    emphasis: 'mastering Software Engineering',
+    before: 'My current focus is ',
+    emphasis: 'modern full-stack development',
     after:
-      ', with long-term ambitions in AI, robotics, and automation. Every project I build is a step toward that future.',
+      ' with Next.js, NestJS, and PostgreSQL. Every project I build strengthens the craft I bring to real problems.',
   },
 ]
 
 export const interests = [
-  '🧠 AI Enthusiast',
-  '🤖 Robotics Vision',
   '⚡ Fast Learner',
   '🌍 Africa-first',
   '🚀 Entrepreneur',
@@ -138,17 +128,6 @@ export const skillGroups: SkillGroup[] = [
       { name: 'Linux', level: '62%', percent: 62 },
     ],
   },
-  {
-    title: 'Future Focus',
-    icon: '🔮',
-    skills: [
-      { name: 'Artificial Intelligence', level: 'Active', percent: 45 },
-      { name: 'Machine Learning', level: 'Learning', percent: 35 },
-      { name: 'Robotics', level: 'Vision', percent: 20 },
-      { name: 'Automation', level: 'Growing', percent: 50 },
-      { name: 'Cloud Systems', level: 'Next', percent: 30 },
-    ],
-  },
 ]
 
 export const projects: Project[] = [
@@ -161,41 +140,6 @@ export const projects: Project[] = [
     icon: '🗺️',
     liveUrl: 'https://biilocalfinder.com/',
     repoUrl: 'https://github.com/gentil015/BII-LocalFinder/',
-  },
-]
-
-export const timeline: TimelineItem[] = [
-  {
-    period: 'Now — 2026',
-    title: 'Mastering the Fundamentals',
-    description:
-      'Deepening expertise in software engineering, building real-world projects, and preparing to pursue a top-tier university degree in Computer Science or Software Engineering.',
-    icon: '📚',
-    side: 'left',
-  },
-  {
-    period: '2026 — 2030',
-    title: 'University & Global Exposure',
-    description:
-      'Studying Software Engineering at a world-class institution. Networking with global innovators, contributing to research, and scaling BII Technologies into a recognized brand.',
-    icon: '🎓',
-    side: 'right',
-  },
-  {
-    period: '2030 — 2033',
-    title: 'AI & Robotics Research',
-    description:
-      'Diving deep into artificial intelligence and robotics. Building systems that can think, adapt, and automate complex tasks — bridging hardware and intelligent software.',
-    icon: '🤖',
-    side: 'left',
-  },
-  {
-    period: '2033+',
-    title: 'BII Technologies — Global Scale',
-    description:
-      'Growing BII Technologies into a full technology company delivering AI-powered products and robotic solutions that create real economic opportunity across Africa and beyond.',
-    icon: '🌍',
-    side: 'right',
   },
 ]
 
@@ -249,7 +193,6 @@ export const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Vision', href: '#vision' },
   { label: 'Services', href: '#services' },
   { label: 'Contact', href: '#contact' },
 ]

@@ -10,7 +10,6 @@ import { Projects } from './components/Projects'
 import { ScrollProgress } from './components/ScrollProgress'
 import { Services } from './components/Services'
 import { Skills } from './components/Skills'
-import { Vision } from './components/Vision'
 import { useReveal } from './hooks/useReveal'
 
 export default function App() {
@@ -31,7 +30,6 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <Vision />
         <Services />
         <Contact />
       </main>
