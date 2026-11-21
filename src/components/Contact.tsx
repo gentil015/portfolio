@@ -94,22 +94,28 @@ export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-title">
       <div className="section-inner">
-        <div className="contact-grid">
-          <div className="contact-info reveal">
-            <p className="section-label">Get In Touch</p>
-            <h2 className="section-title" id="contact-title">
-              Let's build
-              <br />
-              something.
-            </h2>
-            <p className="section-sub" style={{ marginBottom: 0 }}>
-              Whether you have a project, a question, or just want to connect — I'm always open
-              to interesting conversations.
-            </p>
+        <div className="section-heading reveal">
+          <p className="section-label">Get In Touch</p>
+          <h2 className="section-title" id="contact-title">
+            Let's build
+            <br />
+            something.
+          </h2>
+          <p className="section-sub">
+            Whether you have a project, a question, or just want to connect — I'm always open to
+            interesting conversations.
+          </p>
+        </div>
+        <div className="contact-bento">
+          <div className="contact-info bento-card reveal">
+            <span className="card-index" aria-hidden="true">
+              01
+            </span>
+            <p className="contact-card-label">Direct channels</p>
             <div className="contact-links">
               {contactLinks.map((link) => (
                 <a
-                  className="contact-link card-hover"
+                  className="contact-link"
                   href={link.href}
                   key={link.label}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
@@ -122,11 +128,18 @@ export function Contact() {
                     <span className="contact-link-label">{link.label}</span>
                     <span className="contact-link-val">{link.value}</span>
                   </span>
+                  <span className="contact-link-arrow" aria-hidden="true">
+                    ↗
+                  </span>
                 </a>
               ))}
             </div>
           </div>
-          <div className="reveal">
+          <div className="contact-form-card bento-card reveal">
+            <span className="card-index" aria-hidden="true">
+              02
+            </span>
+            <p className="contact-card-label">Send a message</p>
             <form id="contact-form" onSubmit={submit} noValidate>
               <div className="form-row">
                 {field('firstName', 'First Name', 'fname', 'John')}
@@ -136,7 +149,7 @@ export function Contact() {
               {field('subject', 'Subject', 'subject', 'Project Inquiry')}
               {field('message', 'Message', 'message', 'Tell me about your project or idea...', true)}
               <button type="submit" className="btn-primary form-submit">
-                Open Email →
+                Open Email <span aria-hidden="true">↗</span>
               </button>
               <p className={`form-notice${notice ? ' show' : ''}`} role="status" aria-live="polite">
                 {notice}

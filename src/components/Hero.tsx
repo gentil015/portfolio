@@ -1,18 +1,27 @@
-import { site } from '../data/portfolio'
+import { site, skillGroups } from '../data/portfolio'
 import { useTypewriter } from '../hooks/useTypewriter'
+import { Ticker } from './Ticker'
+
+const tickerItems = skillGroups.slice(0, 3).flatMap((group) => group.skills.map((skill) => skill.name))
 
 export function Hero() {
   const typed = useTypewriter(site.typedPhrases)
 
   return (
-    <section id="hero" aria-labelledby="hero-title">
+    <section id="hero" className="hero" aria-labelledby="hero-title">
+      <div className="hero-mesh" aria-hidden="true" />
       <div className="hero-inner">
-        <div className="hero-text">
-          <p className="hero-eyebrow">{site.eyebrow}</p>
+        <div className="hero-copy">
+          <p className="hero-eyebrow">
+            <span className="eyebrow-dot" aria-hidden="true" />
+            {site.eyebrow}
+          </p>
           <h1 className="hero-name" id="hero-title">
-            {site.firstName}
-            <br />
-            <span>{site.lastName}</span>
+            <span className="hero-line">{site.firstName}</span>
+            <span className="hero-line gradient">
+              {site.lastName}
+              <span className="hero-period">.</span>
+            </span>
           </h1>
           <p className="hero-role">{site.role}</p>
           <p className="hero-founder">
@@ -25,16 +34,17 @@ export function Hero() {
               |
             </span>
           </p>
-          <div className="hero-btns">
+          <div className="hero-actions">
             <a href="#projects" className="btn-primary">
-              View Projects
+              View Projects <span aria-hidden="true">↗</span>
             </a>
             <a href="#contact" className="btn-secondary">
-              Contact Me
+              Contact Me <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
-        <div className="hero-visual">
+        <div className="hero-stage">
+          <div className="stage-grid" aria-hidden="true" />
           <div className="orbit-container">
             <div className="orbit-ring orbit-ring-1">
               <span className="orbit-dot orbit-dot-1" />
@@ -47,13 +57,16 @@ export function Hero() {
             </div>
             <div className="avatar-area">
               <img src={site.portrait} alt={`Portrait of ${site.name}`} className="avatar-photo" />
+              <span className="avatar-scan" aria-hidden="true" />
             </div>
-            <span className="orbit-label label-ai">⚡ AI / ML</span>
-            <span className="orbit-label label-bot">🤖 Robotics</span>
-            <span className="orbit-label label-auto">⚙️ Automation</span>
           </div>
+          <span className="stage-chip chip-ai">⚡ AI / ML</span>
+          <span className="stage-chip chip-bot">🤖 Robotics</span>
+          <span className="stage-chip chip-auto">⚙️ Automation</span>
+          <span className="stage-badge">Founder · {site.company}</span>
         </div>
       </div>
+      <Ticker items={tickerItems} />
     </section>
   )
 }

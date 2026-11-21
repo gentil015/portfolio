@@ -4,39 +4,48 @@ export function About() {
   return (
     <section id="about" aria-labelledby="about-title">
       <div className="section-inner">
-        <div className="about-grid">
-          <div className="about-left reveal">
+        <div className="about-bento">
+          <div className="about-title-card bento-card reveal">
             <p className="section-label">About Me</p>
             <h2 className="section-title" id="about-title">
               Building with
               <br />
               purpose.
             </h2>
-            <div className="about-stat-row">
-              {stats.map((stat) => (
-                <div className="stat-card card-hover" key={stat.label}>
-                  <div className="stat-num">{stat.value}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            <span className="card-index" aria-hidden="true">
+              01
+            </span>
           </div>
-          <div className="about-right reveal">
-            {aboutParagraphs.map((paragraph) => (
-              <p className="about-text" key={paragraph.emphasis}>
+          {stats.map((stat, index) => (
+            <div className="stat-card bento-card reveal" key={stat.label}>
+              <span className="stat-index" aria-hidden="true">
+                0{index + 1}
+              </span>
+              <div className="stat-num">{stat.value}</div>
+              <div className="stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+        <div className="about-story">
+          {aboutParagraphs.map((paragraph, index) => (
+            <div className="story-card bento-card reveal" key={paragraph.emphasis}>
+              <span className="story-index" aria-hidden="true">
+                0{index + 1}
+              </span>
+              <p className="about-text">
                 {paragraph.before}
                 <strong>{paragraph.emphasis}</strong>
                 {paragraph.after}
               </p>
-            ))}
-            <div className="about-pills">
-              {interests.map((interest) => (
-                <span className="pill" key={interest}>
-                  {interest}
-                </span>
-              ))}
             </div>
-          </div>
+          ))}
+        </div>
+        <div className="about-pills reveal">
+          {interests.map((interest) => (
+            <span className="pill" key={interest}>
+              {interest}
+            </span>
+          ))}
         </div>
       </div>
     </section>

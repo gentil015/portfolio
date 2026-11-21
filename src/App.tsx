@@ -7,6 +7,7 @@ import { Hero } from './components/Hero'
 import { Loader } from './components/Loader'
 import { Navbar } from './components/Navbar'
 import { Projects } from './components/Projects'
+import { ScrollProgress } from './components/ScrollProgress'
 import { Services } from './components/Services'
 import { Skills } from './components/Skills'
 import { Vision } from './components/Vision'
@@ -20,6 +21,7 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <ScrollProgress />
       <Loader />
       <Cursor />
       <Constellation />
