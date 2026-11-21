@@ -34,8 +34,6 @@ export type ContactLink = {
   href: string
 }
 
-const asset = (file: string) => `${import.meta.env.BASE_URL}images/${file}`
-
 export const site = {
   name: 'Gentil Dushime',
   firstName: 'Gentil',
@@ -47,7 +45,6 @@ export const site = {
   github: 'https://github.com/gentil015',
   linkedin: 'https://linkedin.com/in/gentildushime',
   whatsapp: 'https://wa.me/250795946213',
-  portrait: asset('profile.jpg'),
   typedPhrases: [
     'Building Software That Matters.',
     'Turning Ideas into Real Applications.',

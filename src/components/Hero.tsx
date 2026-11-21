@@ -56,7 +56,10 @@ export function Hero() {
               <span className="orbit-dot orbit-dot-3" />
             </div>
             <div className="avatar-area">
-              <img src={site.portrait} alt={`Portrait of ${site.name}`} className="avatar-photo" />
+              <span className="avatar-monogram" aria-hidden="true">
+                {site.firstName[0]}
+                {site.lastName[0]}
+              </span>
               <span className="avatar-scan" aria-hidden="true" />
             </div>
           </div>

@@ -23,7 +23,10 @@ export function Navbar() {
     <>
       <nav id="nav" className={scrolled ? 'scrolled' : ''}>
         <a href="#top" className="nav-logo" aria-label={`${site.name} — back to top`}>
-          <img src={site.portrait} alt="" />
+          <span className="nav-logo-mark" aria-hidden="true">
+            {site.firstName[0]}
+            {site.lastName[0]}
+          </span>
         </a>
         <ul className="nav-links">
           {navItems.map((item) => (
